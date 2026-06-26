@@ -1,0 +1,15 @@
+-- begin_signature
+-- lcd1602_text
+-- end_signature
+WIDTH=8;
+DEPTH=4;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	3 :	00000001;
+	2 :	00001100;
+	1 :	00000110;
+	0 :	00111000;
+END;
