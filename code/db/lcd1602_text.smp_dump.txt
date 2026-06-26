@@ -1,0 +1,8 @@
+
+State Machine - |lcd1602_text|fsm_state
+Name fsm_state.CONFIG_CMD2 fsm_state.WR_STATIC_TEXT_1L fsm_state.CONFIG_CMD1 fsm_state.IDLE fsm_state.WR_STATIC_TEXT_2L 
+fsm_state.IDLE 0 0 0 0 0 
+fsm_state.CONFIG_CMD1 0 0 1 1 0 
+fsm_state.WR_STATIC_TEXT_1L 0 1 0 1 0 
+fsm_state.CONFIG_CMD2 1 0 0 1 0 
+fsm_state.WR_STATIC_TEXT_2L 0 0 0 1 1 
