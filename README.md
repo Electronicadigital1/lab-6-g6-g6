@@ -73,7 +73,7 @@ La pantalla se inicializa correctamente y muestra el mensaje en ambas líneas.
 ### Parte 2 Mensajes Seleccionables:
 En el siguiente video se evidencia el funcionamiento del sistema donde se pueden cambiar los mensajes en la LCD usando los switches de la FPGA, demostrando la actualización en tiempo real del contenido:
 
-<video src="img/video.mp4" controls width="640"></video>
+[Ver video de demostración](img/video.mp4)
 
 ## Conclusiones
 - Se logró implementar el protocolo de comunicación de la LCD 16x2 en modo paralelo, donde la secuencia de inicialización y los tiempos entre comandos son críticos. El divisor de frecuencia a ~16 ms fue clave para que la FPGA (50 MHz) se comunicara correctamente con la LCD.
