@@ -20,6 +20,10 @@ Cada línea tiene 16 caracteres y cada carácter se representa con 8 bits en ASC
 ### Hoja de datos
 Para este laboratorio se revisó en detalle la hoja de datos de la LCD 16x2. Allí hay una tabla de especificaciones técnicas que detalla el conjunto de instrucciones, los códigos de control correspondientes y los tiempos de ejecución para el controlador de la pantalla. Cada carácter se compone de 8 bits (8 parámetros), y cada línea tiene 16 caracteres, por lo que se necesitan 128 bits por línea. Con base en la tabla se determinaron los comandos de inicialización: function set (0x38), entry mode (0x06), display on/off (0x0C) y clear display (0x01), además del comando para posicionar el cursor al inicio de la segunda línea (0xC0).
 
+<p align="center">
+  <img src="img/tabla.jpeg" alt="Tabla de instrucciones LCD" width="500">
+</p>
+
 ## Objetivos
 ### Parte 1:
 - Comprender el funcionamiento de una pantalla LCD 16x2 y su interfaz paralela
@@ -62,10 +66,14 @@ El código de esta parte se puede revisar en [code/lcd1602_text.v](code/lcd1602_
 ### Parte 1 Texto Estático en LCD:
 La pantalla se inicializa correctamente y muestra el mensaje en ambas líneas.
 
+<p align="center">
+  <img src="img/captura.PNG" alt="LCD con texto estático" width="500">
+</p>
+
 ### Parte 2 Mensajes Seleccionables:
 En el siguiente video se evidencia el funcionamiento del sistema donde se pueden cambiar los mensajes en la LCD usando los switches de la FPGA, demostrando la actualización en tiempo real del contenido:
 
-[Video de demostración](img/video.mp4)
+<video src="img/video.mp4" controls width="640"></video>
 
 ## Conclusiones
 - Se logró implementar el protocolo de comunicación de la LCD 16x2 en modo paralelo, donde la secuencia de inicialización y los tiempos entre comandos son críticos. El divisor de frecuencia a ~16 ms fue clave para que la FPGA (50 MHz) se comunicara correctamente con la LCD.
